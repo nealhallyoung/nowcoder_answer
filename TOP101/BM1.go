@@ -21,9 +21,9 @@ func ReverseList( head *ListNode ) *ListNode {
     curr:=head
     for curr!=nil{
         nextTemp:=curr.Next
-        curr.Next=prev
-        prev=curr
-        curr=nextTemp
+        curr.Next=prev // 把当前节点插到反转链表的头部
+        prev=curr // 更新反转链表头节点
+        curr=nextTemp // 更新原链表的头结点
     }
     return prev
 }
